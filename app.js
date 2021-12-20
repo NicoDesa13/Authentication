@@ -6,8 +6,6 @@ const {
 } = require("./db");
 const path = require("path");
 
-console.log(process.env.FOO);
-
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
 app.post("/api/auth", async (req, res, next) => {
